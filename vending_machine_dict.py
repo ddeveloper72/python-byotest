@@ -1,40 +1,32 @@
 from byotest import *
 
 usd_coins = {
-            #key.value
-    "One_Dollar": 100,
-    "Fifty_cent": 50,
-    "Quater": 25,
-    "Ten_cent": 10,
-    "Five_cent": 5,
-    "Two_cent": 2,
-    "One_cent": 1
+    #key.values
+    "value1": 100,
+    "value2": 50,
+    "value3": 25,
+    "value4": 10,
+    "value5": 5,
+    "value6": 2,
+    "value7": 1
 }
 
 eur_coins = {
-          #key.value
-    "One_Euro": 100,
-    "Fifty_cent": 50,
-    "Tewnty_cent": 20,
-    "Ten_cent": 10,
-    "Five_cent": 5,
-    "Two_cent": 2,
-    "One_cent": 1
+    #key.values
+    "value1": 100,
+    "value2": 50,
+    "value": 20,
+    "value3": 10,
+    "value4": 5,
+    "value5": 2,
+    "value6": 1
 } #refactoring our code
 
 
 
 def get_change(amount, coins=eur_coins):
-    
-    """
-    refactoring our code
-    if amount == 0:
-        return []
 
-    if amount in coins:
-        return [amount]
-    """
-    change = []  #key.value
+    change = [] #key.values
     for coin in coins.values():
         while coin <= amount:
             amount -= coin

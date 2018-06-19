@@ -1,7 +1,7 @@
 from byotest import *
 
 usd_coins = [
-     #key.value
+    #key.values
     {"value": 100,"count": 20},
     {"value": 50,"count": 20},
     {"value": 25,"count": 20},
@@ -14,7 +14,7 @@ usd_coins = [
 
 
 eur_coins = [
-    #key.value
+    #key.values
     {"value": 100,"count": 20},
     {"value": 50,"count": 20},
     {"value": 20,"count": 20},
@@ -22,25 +22,18 @@ eur_coins = [
     {"value": 5,"count": 20},
     {"value": 2,"count": 20},
     {"value": 1,"count": 20}
-]
-          
+]          
 
  #refactoring our code
 
-
-
 def get_change(amount, coins=eur_coins):
-    
-    """
-    refactoring our code
-    if amount == 0:
-        return []
+    for get_change in coins:
+        for key, value in get_change.iteritems():
+            print("key:{} | value: {}".format(key,value))
 
-    if amount in coins:
-        return [amount]
-    """
-    change = []  #key.value
-    for coin in coins():
+"""
+    change = [] #key.values
+    for coin in coins({"value": coins['value']}):
         while coin <= amount:
             amount -= coin
             change.append(coin)
@@ -62,3 +55,4 @@ test_are_equal(get_change(35, usd_coins), [25,10])
 
 
 print("All tests pass!")
+"""
